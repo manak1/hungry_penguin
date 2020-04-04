@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/313cc58e-d2f4-4f01-90a6-f913f9c07df7/deploy-status)](https://app.netlify.com/sites/hungry-penguin/deploys)
 # 🐧はらぺこペンギン🐧
 
 シンプルなポートフォーリオサイト
