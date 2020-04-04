@@ -12,21 +12,18 @@
       <nav class="l-header__nav">
         <ul class="l-header__list">
           <li class="l-header__listItem">
-            <nuxt-link to="/" class="l-header__link">About</nuxt-link>
+            <nuxt-link to="/" :class="isAboutPage">About</nuxt-link>
           </li>
           <li class="l-header__listItem">
-            <nuxt-link to="/" class="l-header__link">Works</nuxt-link>
+            <nuxt-link to="/" :class="isWorksPage">Works</nuxt-link>
           </li>
           <li class="l-header__listItem">
-            <nuxt-link to="/" class="l-header__link">Blog</nuxt-link>
+            <nuxt-link to="/" :class="isBlogPage">Blog</nuxt-link>
           </li>
         </ul>
       </nav>
       <div class="l-header__sns">
         <ul class="l-header__icons">
-          <li>
-            <a href=""><font-awesome-icon icon="fab fa-github"/></a>
-          </li>
           <li>
             <a href="">
               <img
@@ -70,7 +67,28 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    isAboutPage() {
+      return {
+        'l-header__active': this.$route.path.includes('about'),
+        'l-header__link': true
+      }
+    },
+    isWorksPage() {
+      return {
+        'l-header__active': this.$route.path.includes('work'),
+        'l-header__link': true
+      }
+    },
+    isBlogPage() {
+      return {
+        'l-header__active': this.$route.path.includes('blog'),
+        'l-header__link': true
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -78,26 +96,26 @@ export default {}
 
 .l-header {
   &__container {
-    width: 400px;
+    width: 240px;
     height: 100%;
-    padding: 0 40px;
+    padding: 0 20px;
     text-align: center;
   }
 
   &__img {
-    width: 200px;
+    width: 160px;
     border-radius: 50%;
   }
 
   &__title {
     @include text-primary;
 
-    margin-top: 24px;
-    font-size: 24px;
+    margin-top: 8px;
+    font-size: 18px;
   }
 
   &__nav {
-    margin-top: 24px;
+    margin-top: 12px;
   }
 
   &__link {
@@ -110,11 +128,22 @@ export default {}
     text-align: center;
   }
 
+  &__active {
+    &::before {
+      content: '🐧 ';
+      transform: scale(-1, 1);
+    }
+
+    &::after {
+      content: ' 🐧';
+    }
+  }
+
   &__icons {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 24px;
+    margin-top: 12px;
   }
 
   &__icon {
