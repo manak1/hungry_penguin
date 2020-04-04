@@ -1,4 +1,4 @@
-$mobile_size:768px;
+$mobile_size:920px;
 
 @mixin mobile() {
   @media (max-width: $mobile_size) {

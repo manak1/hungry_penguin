@@ -56,9 +56,26 @@ export default {}
 </script>
 
 <style scoped lang="scss">
+@import '@/assets/scss/mixin.scss';
+
 .p-about {
+  @include mobile {
+    text-align: center;
+  }
+
   &__container {
     padding: 0 20px;
+
+    @include mobile {
+      text-align: center;
+      widows: 100%;
+    }
+  }
+
+  &__head {
+    @include mobile {
+      text-align: center;
+    }
   }
 
   &__work {
@@ -74,7 +91,8 @@ export default {}
   }
 
   &__img {
-    width: 640px;
+    width: 100%;
+    max-width: 640px;
   }
 
   &__subTitle {

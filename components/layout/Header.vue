@@ -100,10 +100,14 @@ export default {
     height: 100%;
     padding: 0 20px;
     text-align: center;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__img {
-    width: 160px;
+    width: 120px;
     border-radius: 50%;
   }
 
