@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="l-content">
     <l-header />
     <nuxt />
   </div>
