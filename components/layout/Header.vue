@@ -12,13 +12,13 @@
       <nav class="l-header__nav">
         <ul class="l-header__list">
           <li class="l-header__listItem">
-            <nuxt-link to="/" :class="isAboutPage">About</nuxt-link>
+            <nuxt-link to="/about" :class="isAboutPage">About</nuxt-link>
           </li>
           <li class="l-header__listItem">
-            <nuxt-link to="/" :class="isWorksPage">Works</nuxt-link>
+            <nuxt-link to="/works" :class="isWorksPage">Works</nuxt-link>
           </li>
           <li class="l-header__listItem">
-            <nuxt-link to="/" :class="isBlogPage">Blog</nuxt-link>
+            <nuxt-link to="/blog" :class="isBlogPage">Blog</nuxt-link>
           </li>
         </ul>
       </nav>

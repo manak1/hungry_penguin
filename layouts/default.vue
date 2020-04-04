@@ -1,7 +1,12 @@
 <template>
   <div class="l-content">
     <l-header />
-    <nuxt />
+    <transition
+      enter-active-class="animated fadeInUp"
+      leave-active-class="fadeOutDown"
+    >
+      <nuxt />
+    </transition>
   </div>
 </template>
 
