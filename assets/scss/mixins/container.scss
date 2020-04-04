@@ -1,0 +1,19 @@
+@mixin container() {
+    max-width:710px;
+    width:100%;
+    height:100%;
+    padding:0 20px;
+    margin:0 auto;
+}
+
+.l-content {
+    min-height:80vh;
+    width:100%;
+    height:100%;
+    margin:0 auto;
+  }
+  
+  .c-container {
+    @include container;
+  }
+  
