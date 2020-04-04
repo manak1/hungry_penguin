@@ -1,6 +1,6 @@
-# hungry_penguin
+# はらぺこペンギン🐧
 
-> My sweet Nuxt.js project
+シンプルなポートフォーリオサイト
 
 ## Build Setup
 
